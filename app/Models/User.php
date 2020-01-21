@@ -23,6 +23,10 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
         'password',
     ];
 
+    public function permission() {
+        return $this->belongsTo(Permission::class);
+    }
+
     public function getJWTIdentifier() {
         return $this->getKey();
     }

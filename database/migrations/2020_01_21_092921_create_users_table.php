@@ -19,6 +19,8 @@ class CreateUsersTable extends Migration {
             $table->unsignedTinyInteger('permission_id')->default(1);
             $table->timestamp('confirmed_at')->nullable();
             $table->timestamps();
+
+            $table->foreign('permission_id')->references('id')->on('permissions');
         });
     }
 

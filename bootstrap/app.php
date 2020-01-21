@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Mail\MailServiceProvider;
+use Laravel\Tinker\TinkerServiceProvider;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -89,6 +90,7 @@ $app->register(App\Providers\AppServiceProvider::class);
 $app->register(App\Providers\AuthServiceProvider::class);
 $app->register(Tymon\JWTAuth\Providers\LumenServiceProvider::class);
 $app->register(MailServiceProvider::class);
+$app->register(TinkerServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 
 /*
